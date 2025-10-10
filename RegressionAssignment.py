@@ -25,8 +25,8 @@ Hint: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lin
 # are imported properly. Name the first feature 'X' and the second feature 'y' (these are the labels)
 data = pandas.read_csv("RegressionData.csv", header = None, names=['X', 'y']) # 5 points
 # Reshape the data so that it can be processed properly
-X = _________.values.reshape(-1,1) # 5 points
-y = _________ # 5 points
+X = data.values.reshape(-1,1) # 5 points
+y = data.iloc[:,1] # 5 points
 # Plot the data using a scatter plot to visualize the data
 plt._________(_________, _________) # 5 points
 
