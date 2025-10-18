@@ -38,7 +38,7 @@ reg.fit(X, y) # 5 points
 # Plot the linear fit
 fig = plt.figure()
 y_pred = reg.predict(X) # 5 points
-plt.plot(X,y, c='b') # 5 points
+plt.scatter(X,y, c='b', marker='o') # 5 points
 plt.plot(X, y_pred, 'r') # 5 points
 fig.canvas.draw()
 plt.show()
