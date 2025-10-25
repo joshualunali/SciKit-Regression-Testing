@@ -45,7 +45,7 @@ plt.show()
 
 # # # Complete the following print statement (replace the blanks _____ by using a command, do not hard-code the values):
 # print("The linear relationship between X and y was modeled according to the equation: y = b_0 + X*b_1, \
-# where the bias parameter b_0 is equal to ", _________, " and the weight b_1 is equal to ", _________)
+# where the bias parameter b_0 is equal to ", reg.intercept_, " and the weight b_1 is equal to ", reg.coef_)
 # # 8 points
 
 # # Predict the profit of a restaurant, if this restaurant is located in a city of 18 habitants 
