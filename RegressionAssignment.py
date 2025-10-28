@@ -65,11 +65,11 @@ print("the profit/loss in a city with 18 habitants is ", reg.predict([[18]]))
 
 # Load the data from the file 'LogisticRegressionData.csv' in a pandas dataframe. Make sure all the instances 
 # are imported properly. Name the first feature 'Score1', the second feature 'Score2', and the class 'y'
-data = _________._________(_________, header = _________, names=['Score1', 'Score2', 'y']) # 2 points
+data = pandas.read_csv("LogisticRegressionData.csv", header = None, names=['Score1', 'Score2', 'y']) # 2 points
 
 # Seperate the data features (score1 and Score2) from the class attribute 
-X = _________ # 2 points
-y = _________ # 2 points
+X = data.drop(['y'],axis=1) # 2 points
+y = data['y'] # 2 points
 
 # Plot the data using a scatter plot to visualize the data. 
 # Represent the instances with different markers of different colors based on the class labels.
@@ -77,7 +77,7 @@ m = ['o', 'x']
 c = ['hotpink', '#88c999']
 fig = plt.figure()
 for i in range(len(data)):
-    plt.scatter(_________['Score1'][i], _________['Score2'][i], marker=_________[data['y'][i]], color = _________[data['y'][i]]) # 2 points
+    plt.scatter(X['Score1'][i], X['Score2'][i], marker=_________[data['y'][i]], color = _________[data['y'][i]]) # 2 points
 fig.canvas.draw()
 
 # Train a logistic regression classifier to predict the class labels y using the features X
