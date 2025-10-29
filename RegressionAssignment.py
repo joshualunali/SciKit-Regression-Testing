@@ -79,43 +79,44 @@ fig = plt.figure()
 for i in range(len(data)):
     plt.scatter(X['Score1'][i], X['Score2'][i], marker=m[data['y'][i]], color = c[data['y'][i]]) # 2 points
 fig.canvas.draw()
-fig.show()
+plt.show()
 
 # Train a logistic regression classifier to predict the class labels y using the features X
-regS = _________._________() # 2 points
-regS._________(_________, _________) # 2 points
+regS = linear_model.LogisticRegression() # 2 points
+regS.fit(X, y) # 2 points
 
 # Now, we would like to visualize how well does the trained classifier perform on the training data
 # Use the trained classifier on the training data to predict the class labels
-y_pred = _________._________(_________) # 2 points
+y_pred = regS.predict(X) # 2 points
 # To visualize the classification error on the training instances, we will plot again the data. However, this time,
 # the markers and colors selected will be determined using the predicted class labels
 m = ['o', 'x']
 c = ['red', 'blue'] #this time in red and blue
 fig = plt.figure()
 for i in range(len(data)):
-    plt.scatter(_________['Score1'][i], _________['Score2'][i], _________=_________[y_pred[i]], _________ = _________[y_pred[i]]) # 2 points
+    plt.scatter(X['Score1'][i], X['Score2'][i], marker=m[y_pred[i]], c = c[y_pred[i]]) # 2 points
 fig.canvas.draw()
+plt.show()
 # Notice that some of the training instances are not correctly classified. These are the training errors.
 
-"""
-PART 3: Multi-class classification using logistic regression 
-Not all classification algorithms can support multi-class classification (classification tasks with more than two classes).
-Logistic Regression was designed for binary classification.
-One approach to alleviate this shortcoming, is to split the dataset into multiple binary classification datasets 
-and fit a binary classification model on each. 
-Two different examples of this approach are the One-vs-Rest and One-vs-One strategies.
-"""
+# """
+# PART 3: Multi-class classification using logistic regression 
+# Not all classification algorithms can support multi-class classification (classification tasks with more than two classes).
+# Logistic Regression was designed for binary classification.
+# One approach to alleviate this shortcoming, is to split the dataset into multiple binary classification datasets 
+# and fit a binary classification model on each. 
+# Two different examples of this approach are the One-vs-Rest and One-vs-One strategies.
+# """
 
-#  One-vs-Rest method (a.k.a. One-vs-All)
+# #  One-vs-Rest method (a.k.a. One-vs-All)
 
-# Explain below how the One-vs-Rest method works for multi-class classification # 12 points
-"""
-Your explanation goes here
-"""
+# # Explain below how the One-vs-Rest method works for multi-class classification # 12 points
+# """
+# Your explanation goes here
+# """
 
-# Explain below how the One-Vs-One method works for multi-class classification # 11 points
-"""
-Your explanation goes here
-"""
+# # Explain below how the One-Vs-One method works for multi-class classification # 11 points
+# """
+# Your explanation goes here
+# """
 
