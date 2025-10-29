@@ -77,8 +77,9 @@ m = ['o', 'x']
 c = ['hotpink', '#88c999']
 fig = plt.figure()
 for i in range(len(data)):
-    plt.scatter(X['Score1'][i], X['Score2'][i], marker=_________[data['y'][i]], color = _________[data['y'][i]]) # 2 points
+    plt.scatter(X['Score1'][i], X['Score2'][i], marker=m[data['y'][i]], color = c[data['y'][i]]) # 2 points
 fig.canvas.draw()
+fig.show()
 
 # Train a logistic regression classifier to predict the class labels y using the features X
 regS = _________._________() # 2 points
