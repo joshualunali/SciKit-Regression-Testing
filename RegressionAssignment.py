@@ -108,15 +108,24 @@ plt.show()
 # Two different examples of this approach are the One-vs-Rest and One-vs-One strategies.
 # """
 
-# #  One-vs-Rest method (a.k.a. One-vs-All)
+#  One-vs-Rest method (a.k.a. One-vs-All)
 
-# # Explain below how the One-vs-Rest method works for multi-class classification # 12 points
-# """
-# Your explanation goes here
-# """
+# Explain below how the One-vs-Rest method works for multi-class classification # 12 points
+"""
+In one vs rest, a separate classifier is trained for each unique class label in the dataset, and for each classifier the 
+target class is the positive class for the classifier, and all others are treated as negative. When a prediction is made
+on an instance, each separate classifier produces a probability of that instance being the classifier's positive, and the 
+highest score out of all is used as the prediction.
+"""
 
-# # Explain below how the One-Vs-One method works for multi-class classification # 11 points
-# """
-# Your explanation goes here
-# """
+# Explain below how the One-Vs-One method works for multi-class classification # 11 points
+"""
+In one vs one, a classifier is trained for each unique possible pairs of classes, and each classifier 
+makes a prediction on the sample instance. Each pairwise classifier predicts which class the sample belongs to, and the
+class label with the most predictions is chosen as the output prediction. 
+
+For example, if we had labels 0,1,2,3, we would have classifiers for 0v1, 0v2, 0v3, 1v2, 1v3, and 2v3. If we had a sample
+instance where the actual class is 0, 0v1 would vote 0, 0v2 votes 0, 0v3 votes zero, and the models 1v2, 1v3, and 2v3 would
+vote for either of the two incorrect options, but 0 with three votes would be selected as the final prediction output.
+"""
 
